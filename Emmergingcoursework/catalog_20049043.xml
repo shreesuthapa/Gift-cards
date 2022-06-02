@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<!--  
+Author:Shreesu Thapa-->
+<!--linking xml with the css and xsd file -->
+<?xml-stylesheet type="text/css" href="catalog_20049043.css"?>
+<!-- Store is a root element for the xml file-->
+<Store xsi:noNamespaceSchemaLocation="catalog_20049043.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--Using nav element for creating a navigation bar for the website where different other tags are used  -->
+<nav>
+        <!-- element created inside nav child element -->
+        <Home>Home</Home>
+        <About>About</About>
+        <Card>Gift Cards</Card>
+        <Contact>Contact</Contact>
+        <order>Track Order | Activate | Check Balance</order>
+        <Search>Search</Search>
+</nav>
+<!--Using title, subtitle, description1 and description2 child element for the basic information about the giftcard website -->
+<!-- Using CDATA to write block of texts.-->
+<title><![CDATA[Shreesu's Gift Card]]></title>
+<subtitle><![CDATA[Celebrate special moments with the ones you love]]></subtitle>
+<Description1>Most Popular Gift Cards</Description1>
+<Description2>Browse entire eGift catalog ></Description2>
+<!--giftcards parent is created to store all the information about giftcards -->
+<giftcards>
+        <!--row tag is distinguished by unique id to keep the gift cards in different rows of website. -->
+        <row id="row1">
+                <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC1">
+                        <img id="giftcard1"/>
+                        <Name>Visa Virtual Gift</Name>
+                        <Price actualcost="1000">40</Price>
+                        <Type>Digital Card</Type>
+                        <status>Available</status>
+                        <User>Registered User</User>
+                        <tax taxtype="Tariff ">15%</tax>
+                        <Detail>
+                                <issued>Metabank</issued>
+                                <refund>Non-Refundable</refund>
+                                <reloadable>Non-relodable</reloadable>
+                        </Detail>
+                        <review>4 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC2">
+                        <img id="giftcard2"/>
+                        <Name>Virtual Account</Name>
+                        <Price actualcost="1000">60</Price>
+                        <slogan sloganType="Creative  Slogans">Delivering excellence. Helping you thrive and grow. </slogan>
+                        <Type>Digital Card</Type>
+                        <status>Not-Available</status>
+                        <tax taxtype="Tariff ">15%</tax>
+                        <User>Login User</User>
+                        <Detail>
+                                <reloadable>Non-relodable</reloadable>
+                                <advantage>You can win free gift hampers.</advantage>
+                        </Detail>
+                        <review>1 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC3">
+                        <img id="giftcard3"/>
+                        <Name>Amazon</Name>
+                        <Price actualcost="1000">500</Price>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Validity extend="false">2024-05-12 </Validity>
+                        <Discount>50% off</Discount>
+                        <Detail>
+                                <replacement>Noreplacement</replacement>
+                                <reloadable>Non-relodable</reloadable>                </Detail>
+                        <review>4 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+        </row>
+        <!--row tag is distinguished by unique id to keep the gift cards in different rows of website. -->
+        <row id="row2">
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC4">
+                        <img id="giftcard4"/>
+                        <Name>Spotify Gift Card</Name>
+                        <Price actualcost="99">90</Price>
+                        <slogan sloganType="Creative slogan">Music for every mood.</slogan>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Validity extend="true">2025-09-13</Validity>
+                        <User>Registered Users</User>
+                        <Discount>20% off</Discount>
+                        <review>4 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC5">
+                        <img id="giftcard5"/>
+                        <Name>Happy Birthday</Name>
+                        <Price actualcost="470">300</Price>
+                        <Type>Physical Card</Type>
+                        <status>Not-Available</status>
+                        <Validity extend="false">2021-12-09</Validity>
+                        <Discount>30% off</Discount>
+                        <Detail>
+                                <replacement>Noreplacement</replacement>
+                                <reloadable>Non-relodable</reloadable>
+                        </Detail>
+                        <review>2 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC6"> 
+                        <img id="giftcard6"/>
+                        <Name>ULTA Beauty</Name>
+                        <Price actualcost="100">80</Price>
+                        <slogan sloganType="Advertisment slogan">The possibilities are beautiful.</slogan>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Validity extend="true">2026-12-12</Validity>
+                        <Discount>20% off</Discount>
+                        <Detail>
+                                <reloadable>Non-relodable</reloadable>
+                                <replacement>Replaced if card is lost</replacement>
+                        </Detail>
+                        <review>3 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+        </row>
+
+        <Description1>The Physical Gift Cards </Description1>
+        <Description2>Browse entire eGift catalog ></Description2>
+        <!--row tag is distinguished by unique id to keep the gift cards in different rows of website. -->
+        <row id="row3">
+                <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC7">
+                        <img id="giftcard7"/>
+                        <Name>Roblox Card</Name>
+                        <company>Roblox Company</company>
+                        <Price actualcost="1000">60</Price>
+                        <slogan sloganType="Branding Slogan">Powering Imagination</slogan>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Expiry date="AD">2023-12-15</Expiry>
+                        <User>Website Users</User>
+                        <Discount>75% off</Discount>
+                        <review>3 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC8">
+                        <img id="giftcard8"/>
+                        <Name>Apple Store</Name>
+                        <Price actualcost="15">10</Price>
+                        <Type>Physical Card</Type>
+                        <tax taxtype="Direct tax">5%</tax>
+                        <status>Available</status>
+                        <Validity extend="false">2023-03-24</Validity>
+                        <User>Login User</User>
+                        <Discount>40% off</Discount>
+                        <Detail>
+                                <reloadable>Non-relodable</reloadable>
+                        </Detail>
+                        <review>5 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC9">
+                        <img id="giftcard9"/>
+                        <Name>Retail Therapy</Name>
+                        <Price actualcost="1000">25</Price>
+                        <slogan sloganType="Emotive  Slogan">We rely on certainty to shield us from the pain of confusion.</slogan>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Validity extend="false">2022-12-15</Validity>
+                        <Reward>Earn 1% Reward Point</Reward>
+                        <Detail>
+                        <reloadable>Non-relodable</reloadable>
+                        <replacement>Noreplacement</replacement>
+                        </Detail>
+                        <review>3 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                </row>
+                <!--row tag is distinguished by unique id to keep the gift cards in different rows of website. -->
+                <row id="row4">
+                <giftcard id="GC10">
+                        <img id="giftcard10"/>
+                        <Name>Netflix Card</Name>
+                        <Price actualcost="1000">500</Price>
+                        <slogan sloganType="Commanding Slogan">Netflix and Chill</slogan>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <Expiry date="AD">2024/10/20</Expiry>
+                        <Reward>Earn 9% Reward Point</Reward>
+                        <Detail>
+                        <replacement>Noreplacement</replacement>
+                        </Detail>
+                        <review>3 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC11">
+                        <img id="giftcard11"/>
+                        <Name>Happy Mom</Name>
+                        <Price actualcost="200">100</Price>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <tax taxtype="Direct tax">25%</tax>
+                        <Validity extend="false">2023-10-12</Validity>
+                        <User>All type </User>
+                        <Discount>50% off</Discount>
+                        <Reward>Earn 2% Reward Point</Reward>
+                        <Detail>
+                        <replacement>Noreplacement</replacement>
+                        </Detail>
+                        <review>5 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC12">
+                        <img id="giftcard12"/>
+                        <Name>Play Station </Name>
+                        <Price actualcost="70">25</Price>
+                        <Type>Physical Card</Type>
+                        <status>Available</status>
+                        <tax taxtype="Tariff ">15%</tax>
+                        <Validity extend="false">2024-04-04</Validity>
+                        <Discount>20% off</Discount>
+                        <review>4 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+        </row>
+
+        <Description1>The Digital Gift Cards</Description1>
+        <Description2>Browse entire eGift catalog ></Description2>
+        <!--row tag is distinguished by unique id to keep the gift cards in different rows of website. -->
+
+        <row id="row5">
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC13">
+                        <img id="giftcard13"/>
+                        <Name>Happy grad </Name>
+                        <Price actualcost="870">500</Price>
+                        <Type>Digital Card</Type>
+                        <status>Not-Available</status>
+                        <Validity extend="false">2023-12-15</Validity>
+                        <User>All Type</User>
+                        <Discount>40% off</Discount>
+                        <Detail>
+                        <replacement>Noreplacement</replacement>
+                        <refund>Non-Refundable</refund>
+                        </Detail>
+                        <review>3 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id ="GC14">
+                        <img id="giftcard14"/>
+                        <Name>Wayfair</Name>
+                        <Price actualcost="1000">200</Price>
+                        <slogan sloganType="Advertising  Slogans">Just Believe Wall Décor</slogan>
+                        <Type>Digital Card</Type>
+                        <status>Available</status>
+                        <Validity extend="true">2025-02-12</Validity>
+                        <User>Registered User</User>
+                        <Discount discountType="offer">10% off</Discount>
+                        <review>4 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+                 <!--giftcard child is created which is distinguished by unique id 
+                Here, different element are used some are optional, the element are given some unique attribute. -->
+                <giftcard id="GC15">
+                        <img id="giftcard15"/>
+                        <Name>ebay</Name>
+                        <company>ebay</company>
+                        <Price actualcost="1000">700</Price>
+                        <slogan sloganType="Business Slogans">Connecting Buyers and Sellers Globally</slogan>
+                        <Type>Digital Card</Type>
+                        <status>Available</status>
+                        <Expiry>2022-12-12</Expiry>
+                        <User>Login User</User>
+                        <Discount>5% off</Discount>
+                        <Detail>
+                        <refund>Refundable</refund>
+                        </Detail>
+                        <review>1 star </review>
+                        <Button>Purchase</Button>
+                </giftcard>
+        </row>
+</giftcards> 
+<!-- The footer section of the website-->
+<Footer>
+        <!-- element created inside Footer child element -->
+        <footertitle>Shreesu's Gift Card</footertitle>
+        <Address>-Talchikhel,Lalitpur</Address>
+        <AboutUs>About Us:</AboutUs>
+        <Contacts>
+                <Phone>9841111111</Phone>
+                <Email>shreesugiftcard@gmail.com</Email>
+                <Website>www.shreesugiftcard.com</Website>
+        </Contacts>
+        <socialmedia>
+                <facebook></facebook>
+                <instagram></instagram>
+                <tiktok></tiktok>
+        </socialmedia>
+
+        <country>Nepal | Canada | USA | Japan | UnitedKingdom | Germany</country>
+        <copyright>Copyright 2022 Shreesu's Gift Card. Legal </copyright>
+</Footer>
+</Store>

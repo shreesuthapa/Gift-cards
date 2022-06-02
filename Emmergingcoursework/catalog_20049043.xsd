@@ -1,0 +1,376 @@
+<!--schema used for describing the elements in an xml -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Declaring root element Store-->
+    <xs:element name="Store">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <!-- describing the child elements of the root element.-->
+                <xs:element ref="nav"/>
+                <xs:element ref="title"/>
+                <xs:element ref="subtitle"/>
+                <xs:element ref="Description1"/>
+                <xs:element ref="Description2"/>
+                <xs:element ref="giftcards"/>
+                <xs:element ref="Footer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring child element nav-->
+    <xs:element name="nav">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <xs:element ref="Home"/>
+                <xs:element ref="About"/>
+                <xs:element ref="Card"/>
+                <xs:element ref="Contact"/>
+                <xs:element ref="order"/>
+                <xs:element ref="Search"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring name and type of Home,About,Card,Contact,order and Search-->
+    <xs:element name="Home" type="xs:string"/>
+    <xs:element name="About" type="xs:string"/>
+    <xs:element name="Card" type="xs:string"/>
+    <xs:element name="Contact" type="xs:string"/>
+    <xs:element name="order" type="xs:string"/>
+    <xs:element name="Search" type="xs:string"/>
+
+    <!-- Declaring name and type of child element title,subtitle,Description1 and Description2-->
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="subtitle" type="xs:string"/>
+    <xs:element name="Description1" type="xs:string"/>
+    <xs:element name="Description2" type="xs:string"/>
+
+    <!-- Declaring child element giftcard-->
+    <xs:element name="giftcards">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <!-- maxOccurs unbounded means there can be as many occurrences of the element-->
+                <xs:element ref="row" maxOccurs="unbounded"/>
+                <xs:element ref="Description1"/>
+                <xs:element ref="Description2"/>
+                <xs:element ref="row" maxOccurs="unbounded"/>
+                <xs:element ref="Description1"/>
+                <xs:element ref="Description2"/>
+                <xs:element ref="row" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring child element row-->
+    <xs:element name="row">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <!-- maxOccurs unbounded means there can be as many occurrences of the element
+                minOccurs 1 means the atleast one occurence is required.-->
+                <xs:element ref="giftcard" maxOccurs="unbounded" minOccurs="1"/>
+            </xs:sequence>
+            <!-- attribute to add additional data to the XML element-->
+            <xs:attribute ref="id"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring child element giftcard-->
+    <xs:element name="giftcard">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- xs:all to describe a complete content model-->
+            <xs:all>
+                <xs:element ref="img"/>
+                <xs:element ref="Name"/>
+                <xs:element ref="Price"/>
+                <xs:element ref="Type"/>
+                <xs:element ref="status"/>
+                <!-- maxOccurs 1 means the maximum occurence is one time
+                minOccurs 0 means it is optional-->
+                <xs:element ref="tax" maxOccurs="1" minOccurs="0"/>   
+                <xs:element ref="Validity" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="User" maxOccurs="1" minOccurs="0" />
+                <xs:element ref="Discount" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="Detail" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="Button"/>
+                <xs:element ref="review"/>
+                <xs:element ref="Expiry" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="company" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="Reward" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="slogan" maxOccurs="1" minOccurs="0"/>
+            </xs:all>
+            <!-- attribute to add additional data to the XML element-->
+            <xs:attribute ref="id"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- attribute to add additional data to the XML element-->
+    <xs:attribute name="id" type="xs:string"/>
+
+    <xs:element name="img">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- attribute to add additional data to the XML element-->
+            <xs:attribute ref="id"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Name" type="xs:string"/>
+
+    <xs:element name="Price">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:positiveInteger">
+                    <!-- attribute to add additional data to the XML element-->
+                    <xs:attribute ref="actualcost"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- attribute to add additional data to the XML element along with its type-->
+    <xs:attribute name="actualcost" type="xs:integer"></xs:attribute>
+
+    <xs:element name="Type" type="xs:string"/>
+
+    <!-- Declaring element status-->
+    <xs:element name="status">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:string">
+                <!-- enumeration for substituting one value with the other-->
+                <xs:enumeration value="Available"/>
+                <xs:enumeration value="Not-Available"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element tax-->
+    <xs:element name="tax">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <!-- attribute to add additional data to the XML element-->
+                    <xs:attribute ref="taxtype"/>
+                </xs:extension>    
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- attribute to add additional data to the XML element along with its type.-->
+    <xs:attribute name="taxtype" type="xs:string"/>
+
+    <xs:element name="Validity">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:date">
+                     <!-- attribute to add additional data to the XML element -->
+                    <xs:attribute ref="extend"/>
+                </xs:extension>    
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- attribute to add additional data to the XML element along with its type-->
+    <xs:attribute name="extend" type="xs:boolean"/>
+
+    <!-- Declaring element User-->
+    <xs:element name="User" type="xs:string"/>
+
+    <!-- Declaring element Discount-->
+    <xs:element name="Discount">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <!-- attribute to add additional data to the XML element-->
+                    <xs:attribute ref="discountType"/>
+                </xs:extension>    
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- attribute to add additional data to the XML element along with its type-->
+    <xs:attribute name="discountType" type="xs:string"/>
+
+    <!-- Declaring element Detail-->
+    <xs:element name="Detail">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to describe a complete content model-->
+            <xs:all>
+                <xs:element ref="replacement" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="reloadable" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="advantage" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="issued" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="refund" maxOccurs="1" minOccurs="0"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Declaring elements and their type as string-->
+    <xs:element name="reloadable" type="xs:string"/>
+    <xs:element name="replacement" type="xs:string"/>
+    <xs:element name="advantage" type="xs:string"/>
+    <xs:element name="issued" type="xs:string"/>
+    <xs:element name="refund" type="xs:string"/>
+
+    <!-- Declaring element slogan-->
+    <xs:element name="slogan">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <!-- attribute to add additional data to the XML element-->
+                    <xs:attribute ref="sloganType"/>
+                </xs:extension>    
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- attribute to add additional data to the XML element-->
+    <xs:attribute name="sloganType" type="xs:string"/>
+    <xs:element name="review" type="xs:string"/>
+    <xs:element name="Button" type="xs:string"/>
+
+    <!-- Declaring element Expiry-->
+    <xs:element name="Expiry">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- simpleContent element contains extensions or restrictions -->
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="date"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- attribute to add additional data to the XML element with fixed data AD-->
+    <xs:attribute name="date" fixed="AD"/>
+
+    <!-- Declaring element and type as string-->
+    <xs:element name="company" type="xs:string"/>
+    <xs:element name="Reward" type="xs:string"/>
+
+    <!-- Declaring child element Footer-->
+    <xs:element name="Footer">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <xs:element ref="footertitle"/>
+                <xs:element ref="Address"/>
+                <xs:element ref="AboutUs"/>
+                <xs:element ref="Contacts"/>
+                <xs:element ref="socialmedia"/>
+                <xs:element ref="country"/>
+                <xs:element ref="copyright"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="footertitle" type="xs:string"/>
+    <xs:element name="Address" type="xs:string"/>
+    <xs:element name="AboutUs" type="xs:string"/>
+
+    <!-- Declaring element Conatacts-->
+    <xs:element name="Contacts">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <xs:element ref="Phone"/>
+                <xs:element ref="Email"/> 
+                <xs:element ref="Website"/>   
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring element Phone-->
+    <xs:element name="Phone">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:string">
+                <xs:length value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element Email-->
+    <xs:element name="Email">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:token">
+                <xs:pattern value="[^@]+@[^\.]+\..+"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element Website-->
+    <xs:element name="Website">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element socialmedia-->
+    <xs:element name="socialmedia">
+        <!--Declaring the root element as complexType as it has child element. -->
+        <xs:complexType>
+            <!-- to specify that the child elements must appear in a sequence-->
+            <xs:sequence>
+                <xs:element ref="facebook"/>
+                <xs:element ref="instagram"/> 
+                <xs:element ref="tiktok"/>   
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Declaring element facebook-->
+    <xs:element name="facebook">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element instagram-->
+    <xs:element name="instagram">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Declaring element tiktok-->
+    <xs:element name="tiktok">
+        <!-- simpleType for text-only content-->
+        <xs:simpleType>
+            <!-- to define acceptable values for XML elements or attributes-->
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <!-- Declaring element and type as string-->
+    <xs:element name="country" type="xs:string"/>
+    <xs:element name="copyright" type="xs:string"/>
+</xs:schema>

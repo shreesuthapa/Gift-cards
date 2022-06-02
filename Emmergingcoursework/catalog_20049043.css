@@ -1,0 +1,497 @@
+/* css for root element Store*/
+Store 
+{ 
+    /* for adding background image*/
+    background-image: url(backgroundimage.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* css for nav element*/
+nav
+{
+    background-image: url(giftcardlogo.jpg);
+    background-size: contain;
+    height: 10%;
+    width: 10%;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-left: 80px;
+    font-size: 30px;
+    background-color:#d9d2d1;
+    border: 3px solid rgb(99, 95, 93);
+}
+Home
+{
+    padding-left: 8x;
+    
+}
+About
+{
+    padding-left: 30px;
+}
+Card
+{
+    padding-left: 45px;
+}
+Contact
+{
+    padding-left: 60px;
+}
+order{
+    font-size: 15px;
+    padding-left: 300px;
+    padding-right: 33px;
+}
+Search
+{
+    padding-right: 36px;
+    padding-left: 35px;
+    text-align: center;
+    float: right;
+    color: black;
+    background-color: gray;
+    border: 2px rgb(99, 95, 93) solid;
+    
+}
+/* adding hover effect for Search element */
+Search:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 1px black solid;
+    transition: 0.5s ease;
+}
+/* css for title */
+title
+{
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 60px;
+    font: bolder;
+    padding-left: 450px;
+    display: block;
+    line-height: 65px;
+}
+/* css for subtitle */
+subtitle
+{
+    color: gray;
+    font: bold;
+    font-size: 20px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    display: block; 
+    line-height: 33px;
+    padding-left: 490px;
+    
+}
+/* css for Description1 */
+Description1
+{
+    font-size: 40px;
+    color: rgb(59, 59, 125);
+    background-color: #f8e6e4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 420px;
+    padding-right: 510px;
+}
+/* css for  Description2*/
+Description2
+{
+    display: block; 
+    line-height: 50px;
+    font-size: 20px;
+    color: rgb(53, 53, 146);
+    background-color: #f8e6e4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 500px;
+    text-decoration: underline;
+
+}
+/* css for  child element giftcard*/
+giftcard
+{
+    display: flex;
+    font-size: 26px; 
+    color: rgb(174, 169, 162);
+    flex-direction: column;
+}
+/* css for  id row1*/
+#row1
+{
+    display: flex;
+}
+/* css for  id giftcard1*/
+#giftcard1{
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard1.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for  id GC1*/
+#GC1
+{
+    padding-left: 40px;
+
+}
+/* css for  Name*/
+Name{
+    display:flex;
+    padding-left: 10px;
+    color: black;
+    font-size: 28px;
+    background-color: #F9F1F0;
+    margin-right: 230px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+/* css using display flex feature to layout different sections of website*/
+issued{
+    display: flex;
+}
+refund{
+    display: flex;
+}
+reloadable{
+    display: flex;
+}
+replacement{
+    display: flex;
+}
+advantage
+{
+    display: flex;
+}
+/* css for id giftcard2 */
+#giftcard2{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard2.jpg");
+    width: 350px;
+    height: 200px;
+    
+}
+/* css for id giftcard3*/
+#giftcard3{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard3.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id row2 */
+#row2
+{
+    display: flex;
+}
+/* css for id GC4 */
+#GC4
+{
+    padding-left: 40px;
+}
+/* css for id giftcard4 */
+#giftcard4{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard4.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard5*/
+#giftcard5{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard5.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard6*/
+#giftcard6{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard6.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id row3*/
+#row3
+{
+    display: flex;
+}
+/* css for id GC7 */
+#GC7
+{
+    padding-left: 40px;
+}
+/* css for id giftcard7*/
+#giftcard7{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard7.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard8*/
+#giftcard8{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard8.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard9*/
+#giftcard9{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard9.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id row4 */
+#row4
+{
+    display: flex;
+}
+/* css for id GC10 */
+#GC10
+{
+    padding-left: 40px;
+}
+/* css for id giftcard10*/
+#giftcard10{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard10.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard11*/
+#giftcard11{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard11.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard12*/
+#giftcard12{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard12.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id row5*/
+#row5
+{
+    display: flex;
+}
+/* css for id GC13*/
+#GC13
+{
+    padding-left: 40px;
+}
+/* css for id giftcard13*/
+#giftcard13{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard13.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard14*/
+#giftcard14{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard14.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for id giftcard15*/
+#giftcard15{
+    background-repeat: no-repeat;
+    background-size: 350px 200px;
+    background-image: url("./Giftcard15.jpg");
+    width: 350px;
+    height: 200px;
+}
+/* css for Button*/
+Button
+{
+    background-color: rgb(183, 179, 179);
+    color: black;
+    font-size: 30px;
+    font-family: 'Lucida Sans', sans-serif;
+    padding-left: 10px;
+    margin-right: 300px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+
+}
+/* css for hovering Button */
+Button:hover{
+    background-color: black;
+    color: white;
+    border: 1px white solid;
+    transition: 0.5s ease;
+}
+/* css for Footer */
+Footer
+{
+    display: flex;
+    font-size: 25px;
+    display: block;
+    background-color: #9e9b9a;
+    border: 5px solid blue;
+}
+/* css for footertitle */
+footertitle
+{
+    display: flex;
+    color: black;
+    background-color:#9e9b9a ;
+    padding-left: 500px;
+    font-size: 33px;
+}
+/* css for Address */
+Address{
+    color: black;
+    background-color: #9e9b9a;
+    padding-left: 600px;
+    font-size: 20px;
+}
+/* css for  AboutUs*/
+AboutUs
+{
+    display: flex;
+    text-decoration: underline;
+    padding-top: 10px;
+}
+/* css for  Phone*/
+Phone
+{
+    display: flex;
+    padding-top: 5px;
+}
+/* css for  Email*/
+Email{
+    display: flex;
+}
+/* css for  Website*/
+Website{
+    display: flex;
+    padding-bottom: 20px;
+}
+/* css for facebook*/
+facebook{
+    display: flex;
+}
+/* css for instagram*/
+instagram{
+    display: flex;
+}
+/* css for tiktok*/
+tiktok{
+    display: flex;
+}
+/* css for country*/
+country{
+    display: flex;
+    padding-left: 400px;
+    padding-top: 40px;
+    background-color: #9e9b9a;
+}
+/* css for copyright*/
+copyright{
+    display: flex;
+    padding-left: 450px;
+    text-decoration: underline;
+    padding-bottom: 20px;  
+    background-color: #9e9b9a;
+}
+/* css for displaying the text written on content before the element.*/
+Price::before{
+    content: 'Price: $';
+}
+Type::before {
+    content: 'Type: ';
+}
+Status::before{
+    content: 'Status:';
+}
+User::before{
+    content: 'User: ';
+}
+issued::before{
+    content:'Issued By: ';
+}
+refund::before{
+    content: 'Refund: ';
+}
+reloadable::before{
+    content: 'Reloadable: ';
+}
+Discount::before{
+    content: 'Discount: ';
+}
+Validity::before{
+    content: 'Validity: ';
+}
+replacement::before{
+    content: 'Replacement:';
+}
+slogan::before{
+    content: 'Slogan:';
+}
+review::before{
+    content: 'Review:';
+}
+Expiry::before{
+    content: 'Expiry Date: ';
+}
+status::before{
+    content: 'Status: ';
+}
+company::before{
+    content: 'Company: ';
+}
+issued::before{
+    content: 'Issued By: ';
+}
+Phone::before{
+    content: 'Phone Number: ';
+}
+Email::before{
+    content: 'Email: ';
+}
+Website::before{
+    content: 'Website: ';
+}
+socialmedia::before{
+    content: 'Follow us at :';
+    text-decoration: underline;
+}
+facebook::before{
+    content: 'Facebook ';
+}
+instagram::before{
+    content: 'Instagram ';
+}
+tiktok::before{
+    content: 'Tiktok ';
+}
+tax::before{
+    content: 'Tax: ';
+}
+/* css for border at img element*/
+img{
+    border: 8px solid blue;
+}
+/* css for hovering the image*/
+img:hover{
+    transform: scale(1.1);
+    border: 5px solid rgb(244, 238, 57);
+
+}
